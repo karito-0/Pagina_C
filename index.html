@@ -13,7 +13,7 @@
     <nav class="mf-header__nav">
       <a class="mf-header__link" href="#home">Inicio</a>
       <a class="mf-header__link" href="#gallery">Galería</a>
-      <a class="mf-header__link" href="#card">Tarjetas</a>
+      <a class="mf-header__link" href="#cards">Tarjetas</a>
       <a class="mf-header__link" href="#form">Contacto</a>
     </nav>
   </header>
@@ -24,41 +24,58 @@
       <p class="mf-lead">Este proyecto demuestra media queries, breakpoints y técnicas responsivas.</p>
     </section>
 
+    <!-- Galería local -->
     <section class="mf-section" id="gallery">
-      <h2 class="mf-subtitle">Galería de Goku (responsive)</h2>
+      <h2 class="mf-subtitle">Galería de Goku (imágenes locales)</h2>
+      <div class="mf-gallery">
+        <img src="GOKU.AZUL.jpg" alt="Goku Azul" class="mf-gallery__img">
+        <img src="GOKU.ROJO.jpg" alt="Goku Rojo" class="mf-gallery__img">
+        <img src="GOKU.GRIS.jpg" alt="Goku Gris" class="mf-gallery__img">
+      </div>
+    </section>
+
+    <!-- Galería adaptativa con picture -->
+    <section class="mf-section">
+      <h2 class="mf-subtitle">Galería adaptativa (con picture y srcset)</h2>
       <div class="mf-gallery">
         <picture>
-          <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/1200x600?text=Goku+large">
-          <source media="(min-width: 768px)" srcset="https://via.placeholder.com/800x400?text=Goku+medium">
-          <img src="https://via.placeholder.com/480x240?text=Goku+small" alt="Goku" class="mf-gallery__img">
+          <source media="(min-width: 1200px)" srcset="GOKU.AZUL.jpg">
+          <source media="(min-width: 768px)" srcset="GOKU.AZUL.jpg">
+          <img src="GOKU.AZUL.jpg" alt="Goku Azul" class="mf-gallery__img">
         </picture>
         <picture>
-          <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/1200x600?text=Goku+2+large">
-          <source media="(min-width: 768px)" srcset="https://via.placeholder.com/800x400?text=Goku+2+medium">
-          <img src="https://via.placeholder.com/480x240?text=Goku+2+small" alt="Goku 2" class="mf-gallery__img">
+          <source media="(min-width: 1200px)" srcset="GOKU.ROJO.jpg">
+          <source media="(min-width: 768px)" srcset="GOKU.ROJO.jpg">
+          <img src="GOKU.ROJO.jpg" alt="Goku Rojo" class="mf-gallery__img">
         </picture>
         <picture>
-          <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/1200x600?text=Goku+3+large">
-          <source media="(min-width: 768px)" srcset="https://via.placeholder.com/800x400?text=Goku+3+medium">
-          <img src="https://via.placeholder.com/480x240?text=Goku+3+small" alt="Goku 3" class="mf-gallery__img">
+          <source media="(min-width: 1200px)" srcset="GOKU.GRIS.jpg">
+          <source media="(min-width: 768px)" srcset="GOKU.GRIS.jpg">
+          <img src="GOKU.GRIS.jpg" alt="Goku Gris" class="mf-gallery__img">
         </picture>
       </div>
     </section>
 
-    <section class="mf-section" id="card">
+    <!-- Tarjetas adaptativas -->
+    <section class="mf-section" id="cards">
       <h2 class="mf-subtitle">Tarjetas adaptativas</h2>
       <div class="mf-cards">
-        <article class="mf-card">
-          <h3 class="mf-card__title">Tarjeta 1</h3>
-          <p class="mf-card__text">Se apila en móvil y se alinea en escritorio.</p>
-        </article>
-        <article class="mf-card">
-          <h3 class="mf-card__title">Tarjeta 2</h3>
-          <p class="mf-card__text">Usa rem y em para tipografías relativas.</p>
-        </article>
+        <div class="mf-card">
+          <h3 class="mf-card__title">Diseño Responsivo</h3>
+          <p class="mf-card__text">Se adapta automáticamente al tamaño de pantalla del usuario, mejorando la experiencia.</p>
+        </div>
+        <div class="mf-card">
+          <h3 class="mf-card__title">Mobile First</h3>
+          <p class="mf-card__text">Primero se diseña para móviles y luego se amplía con media queries.</p>
+        </div>
+        <div class="mf-card">
+          <h3 class="mf-card__title">Flexbox & Grid</h3>
+          <p class="mf-card__text">Permiten crear estructuras flexibles y adaptativas de manera sencilla.</p>
+        </div>
       </div>
     </section>
 
+    <!-- Formulario -->
     <section class="mf-section" id="form">
       <h2 class="mf-subtitle">Formulario responsivo</h2>
       <form class="mf-form" action="#" method="post">
