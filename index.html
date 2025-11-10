@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Proyecto Mobile First - Diseño Adaptativo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="mf-header">
+    <div class="mf-header__brand">MobileFirst Demo</div>
+    <button class="mf-header__toggle" aria-label="Abrir menú">☰</button>
+    <nav class="mf-header__nav">
+      <a class="mf-header__link" href="#home">Inicio</a>
+      <a class="mf-header__link" href="#gallery">Galería</a>
+      <a class="mf-header__link" href="#card">Tarjetas</a>
+      <a class="mf-header__link" href="#form">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="mf-main" id="home">
+    <section class="mf-section mf-section--intro">
+      <h1 class="mf-title">Diseño Mobile First</h1>
+      <p class="mf-lead">Este proyecto demuestra media queries, breakpoints y técnicas responsivas.</p>
+    </section>
+
+    <section class="mf-section" id="gallery">
+      <h2 class="mf-subtitle">Galería de Goku (responsive)</h2>
+      <div class="mf-gallery">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/1200x600?text=Goku+large">
+          <source media="(min-width: 768px)" srcset="https://via.placeholder.com/800x400?text=Goku+medium">
+          <img src="https://via.placeholder.com/480x240?text=Goku+small" alt="Goku" class="mf-gallery__img">
+        </picture>
+        <picture>
+          <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/1200x600?text=Goku+2+large">
+          <source media="(min-width: 768px)" srcset="https://via.placeholder.com/800x400?text=Goku+2+medium">
+          <img src="https://via.placeholder.com/480x240?text=Goku+2+small" alt="Goku 2" class="mf-gallery__img">
+        </picture>
+        <picture>
+          <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/1200x600?text=Goku+3+large">
+          <source media="(min-width: 768px)" srcset="https://via.placeholder.com/800x400?text=Goku+3+medium">
+          <img src="https://via.placeholder.com/480x240?text=Goku+3+small" alt="Goku 3" class="mf-gallery__img">
+        </picture>
+      </div>
+    </section>
+
+    <section class="mf-section" id="card">
+      <h2 class="mf-subtitle">Tarjetas adaptativas</h2>
+      <div class="mf-cards">
+        <article class="mf-card">
+          <h3 class="mf-card__title">Tarjeta 1</h3>
+          <p class="mf-card__text">Se apila en móvil y se alinea en escritorio.</p>
+        </article>
+        <article class="mf-card">
+          <h3 class="mf-card__title">Tarjeta 2</h3>
+          <p class="mf-card__text">Usa rem y em para tipografías relativas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="mf-section" id="form">
+      <h2 class="mf-subtitle">Formulario responsivo</h2>
+      <form class="mf-form" action="#" method="post">
+        <label class="mf-form__label">
+          Nombre
+          <input class="mf-form__input" type="text" name="name" required>
+        </label>
+        <label class="mf-form__label">
+          Correo
+          <input class="mf-form__input" type="email" name="email" required>
+        </label>
+        <label class="mf-form__label mf-form__label--full">
+          Mensaje
+          <textarea class="mf-form__textarea" name="message" rows="4"></textarea>
+        </label>
+        <button class="mf-form__submit" type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="mf-footer">
+    <p>Proyecto Mobile First • Karoll Orduz</p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.mf-header__toggle');
+    const nav = document.querySelector('.mf-header__nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('mf-header__nav--open');
+    });
+  </script>
+</body>
+</html>
